@@ -47,12 +47,13 @@ export class UserRepository extends Repository<User> {
     if (user && user.validatePassword(password)) {
       const userResponse = new SignInResponse();
 
-      userResponse.firstname = user.firstname;
-      userResponse.lastname = user.lastname;
-      userResponse.email = user.email;
-      userResponse.phoneNumber = user.phoneNumber;
-
+      // userResponse.firstname = user.firstname;
+      // userResponse.lastname = user.lastname;
+      // userResponse.email = user.email;
+      // userResponse.phoneNumber = user.phoneNumber;
+      userResponse.message="welcome back " +user.firstname +" " + user.lastname;
       return userResponse;
+
     } else {
       return null;
     }

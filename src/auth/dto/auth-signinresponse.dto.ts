@@ -3,4 +3,5 @@ export class SignInResponse {
   lastname: string;
   email: string;
   phoneNumber: string;
+  message:string;
 }
